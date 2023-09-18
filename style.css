@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #ec1f55;
+  --text-color: #333;
+}
+
+body {
+  font-family: "JetBrains Mono", monospace;
+  /* background-color: #ebebeb; */
+  background-image: url('./Image/Cruel\ Summer.jpg');
+  background-size: cover;
+}
+
+.player {
+  max-width: 480px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.player .btn-stop {
+  display: none;
+}
+
+.player.playing .btn-stop {
+  display: inline-block;
+  color: #ec1f55;
+}
+
+.player.playing .btn-play {
+  display: none;
+}
+
+.player .btn-play {
+  color: #ec1f55;
+}
+
+.dashboard {
+  width: 100%;
+  top: 0;
+  max-width: 480px;
+  position: fixed;
+  padding: 16px 16px 14px;
+  background-color: #fff;
+  border-bottom: 1px solid #dee2e6;
+  border-radius: 5px;
+}
+
+h4 {
+  text-align: center;
+}
+
+.cd {
+  display: flex;
+  justify-content: center;
+  width: 300px;
+  margin: 20px auto;
+}
+
+.cd-player {
+  padding-top: 100%;
+  border-radius: 50%;
+  width: 100%;
+  background-size: cover;
+  /* width: 100%;
+  padding-top: 100%;
+  border-radius: 50%;
+  background-color: #333;
+  background-size: cover;
+  margin: auto; */
+}
+
+.song-name {
+  text-align: center;
+  margin: 0px 0px 20px;
+}
+
+/* Feature */
+.feature {
+  min-width: 300px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.feature .btn {
+  cursor: pointer;
+}
+
+.song-progress {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.music-timer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.progress {
+  width: 100%;
+  height: 8px;
+  border-radius: 5px;
+  -webkit-appearance: none;
+  background-color: #333;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  margin-bottom: 2px;
+}
+
+.progress::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  border: 2px solid #fff;
+  cursor: pointer;
+  box-shadow: 0 5px 5px rgba(255, 26, 26, 0.22);
+}
+
+/* Button */
+.feature .btn.btn-replay.active,
+.feature .btn.btn-shuffle.active {
+  color:#ec1f55;
+}
+
+/* Playlist */
+.play-list {
+  margin-top: 540px;
+  padding: 10px;
+  background-color: #ebebeb;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.song {
+  display: flex;
+  align-items: center;
+  margin: 0px 10px 10px 10px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.option {
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.song .thumb {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-size: cover;
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.song.active {
+  color: #fff;
+  background-color: #ec1f55;
+}
+
+.song .title {
+  font-size: 18px;
+}
+
+.song .author {
+  font-size: 14px;
+}
+
+.song:active {
+  opacity: 0.8;
+}
